@@ -29,5 +29,30 @@
 
 ## データーベース設計
 
+### Departure テーブル
+
+| Column          | Type   | Options     |
+| --------------- | ------ | ----------- |
+| departure       | string | null: false |
+
+#### Association
+
+- has_many :schedules
+
+### Schedule テーブル
+
+| Column          | Type   | Options     |
+| --------------- | ------ | ----------- |
+| country         | string | null: false |
+| airline         | string | null: false |
+| fltnum          | string | null: false |
+| dptime          | time   | null: false |
+| artime          | time   | null: false |
+| day             | string | null: false |
+
+#### Association
+
+- belongs_to :departure
+
 ## ローカルでの動作方法
 
