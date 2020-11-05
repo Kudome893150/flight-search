@@ -41,14 +41,16 @@
 
 ### Schedule テーブル
 
-| Column          | Type   | Options     |
-| --------------- | ------ | ----------- |
-| country         | string | null: false |
-| airline         | string | null: false |
-| fltnum          | string | null: false |
-| dptime          | time   | null: false |
-| artime          | time   | null: false |
-| day             | string | null: false |
+| Column          | Type    | Options            |
+| --------------- | ------- | ------------------ |
+| country         | string  | null: false        |
+| airline         | string  | null: false        |
+| fltnum          | integer | null: false        |
+| dptime          | time    | null: false        |
+| artime          | time    | null: false        |
+| day             | string  | null: false        |
+| departure       |         | foreign_key: true  |
+
 
 #### Association
 
