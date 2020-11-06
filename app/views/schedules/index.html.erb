@@ -1,0 +1,22 @@
+<h1>フライト検索</h1>
+
+<%= search_form_for @p, url: schedules_search_path do |f| %>
+ <%= f.label :departure_departure_eq, '出発地' %>
+ <%= f.collection_select :departure_departure_eq, @departure_departure, :departure, :departure,  include_blank: '指定なし' %>
+ <br>
+ <%= f.label :country_eq, '到着地' %>
+ <%= f.collection_select :country_eq, @schedule_country, :country, :country,  include_blank: '指定なし' %>
+ <br>
+ <%= f.label :day_eq, '曜日' %>
+ <%= f.collection_select :day_eq, @schedule_day, :day, :day,  include_blank: '指定なし' %>
+ <br>
+ <%= f.label :model, '旅客便 or 貨物便:' %>
+  <%= f.radio_button :model_eq, '旅客便' %>
+  旅客便
+  <%= f.radio_button :model_eq, '貨物便' %>
+  貨物便
+  <br>
+
+  <%= f.submit '検索' %>
+  <br>
+<% end %>

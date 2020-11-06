@@ -49,6 +49,7 @@
 | dptime          | time    | null: false        |
 | artime          | time    | null: false        |
 | day             | string  | null: false        |
+| model           | string  | null: false        |
 | departure       |         | foreign_key: true  |
 
 
