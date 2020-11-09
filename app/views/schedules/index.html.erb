@@ -1,22 +1,47 @@
-<h1>フライト検索</h1>
+<%= render "shared/header" %>
+<div class="index-page">
+  <div class="all-images">
+      <div class="b"><img class="flight-image" src="assets/flight1.png"></div>
+      <div class="b"><img class="flight-image" src="assets/flight2.png"></div>
+      <div class="b"><img class="flight-image" src="assets/flight3.png"></div>
+  </div>
 
-<%= search_form_for @p, url: schedules_search_path do |f| %>
- <%= f.label :departure_departure_eq, '出発地' %>
- <%= f.collection_select :departure_departure_eq, @departure_departure, :departure, :departure,  include_blank: '指定なし' %>
- <br>
- <%= f.label :country_eq, '到着地' %>
- <%= f.collection_select :country_eq, @schedule_country, :country, :country,  include_blank: '指定なし' %>
- <br>
- <%= f.label :day_eq, '曜日' %>
- <%= f.collection_select :day_eq, @schedule_day, :day, :day,  include_blank: '指定なし' %>
- <br>
- <%= f.label :model, '旅客便 or 貨物便:' %>
-  <%= f.radio_button :model_eq, '旅客便' %>
-  旅客便
-  <%= f.radio_button :model_eq, '貨物便' %>
-  貨物便
-  <br>
+  <%= search_form_for @p, url: schedules_search_path do |f| %>
+    <div class="all-search-form">
+      <p class='body-title'>FRIGHT SEARCH</p>
+      <div class = "search-form">
+        <div class="departure-form">
+          <%= f.label :departure_departure_eq, '出発地' %>
+          <%= f.collection_select :departure_departure_eq, @departure_departure, :departure, :departure,  include_blank: '指定なし'%>
+          <br>
+        <p class="form-explain"> 出発地の選択はこちらから </p>
+        </div> 
+        <div class="arrive-form">
+          <%= f.label :country_eq, '到着地' %>
+          <%= f.collection_select :country_eq, @schedule_country, :country, :country,  include_blank: '指定なし' %>
+          <br>
+        <p class="form-explain">到着地の選択はこちらから</p>
+        </div>   
+      </div>  
+      <div class="day-form">
+        <%= f.label :day_eq, '曜日' %>
+        <%= f.collection_select :day_eq, @schedule_day, :day, :day,  include_blank: '指定なし' %>
+        <br> 
+        <p class="form-explain">曜日の指定はこちらから</p>
+      </div>  
+      <div class="model-form">
+        <%= f.label :model, '旅客便 or 貨物便:' %>
+          <%= f.radio_button :model_eq, '旅客便' %>
+          旅客便
+          <%= f.radio_button :model_eq, '貨物便' %>
+          貨物便
+          <br>
+        <p class="form-explain">旅客便・貨物便の指定はこちらから </p>
+      </div>   
+      <%= f.submit 'SEARCH' %>
+      <br>
+  </div>
+  <% end %>
+</div>
 
-  <%= f.submit '検索' %>
-  <br>
-<% end %>
+<%= render "shared/footer" %>
