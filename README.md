@@ -54,8 +54,22 @@
 
 
 #### Association
-
+- belongs_to :user
 - belongs_to :departure
+
+users テーブル
+
+| Column          | Type   | Options     |
+| --------------- | ------ | ----------- |
+| email           | string | null: false |
+| password        | string | null: false |
+| nickname        | string | null: false |
+| first_name      | string | null: false |
+| last_name       | string | null: false |
+
+#### Association
+
+- has_many :schedules
 
 ## ローカルでの動作方法
 

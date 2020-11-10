@@ -9,6 +9,9 @@ class SchedulesController < ApplicationController
 
   def search
     @results = @p.result.includes(:departure)
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end  
   end
 
   private
