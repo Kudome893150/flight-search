@@ -1,23 +1,33 @@
-<h1>
-  検索結果
-</h1>
-<%# 検索結果の個数で条件分岐 %>
-<% if @results.length !=0 %>
-  <% @results.each do |result| %>
-    <td>
-    <br>
-    <li>
-    <%= "出発空港：#{result.departure.departure}" %>
-    <%= "到着国:#{result.country}" %>
-    <%= "航空会社：#{result.airline}" %>
-    <%= "便名:#{result.fltnum}" %>
-    <%= "出発時刻:#{result.dptime.strftime('%H:%M')}" %>
-    <%= "到着時刻：#{result.artime.strftime('%H:%M')}" %>
-    <%= "曜日：#{result.day}" %>
-    </li>
+<%= render "shared/header" %>
+
+<div class="all-search-form">
+  <h1> 検索結果</h1>
+  <%# 検索結果の個数で条件分岐 %>
+  <% if @results.length !=0 %>
+    <% @results.each do |result| %>
+    <div class="flight-schedules">
+          <td>
+          <br>
+          <li class="results-top">
+            <p class="airline-name"><%= "便名：#{result.airline}#{result.fltnum}" %></p>
+            <p class="day"><%= "曜日 : #{result.day}曜発" %></p>
+          </li> 
+
+          <li class="results-middle">
+            <span class="airport"><%= "出発空港：#{result.departure.departure}  ⇨ 到着国 : #{result.country}" %></span>
+          </li>
+
+          <li class="results-bottom">
+           <span class="time"> <%= "出発時刻:#{result.dptime.strftime('%H:%M')} ⇨ 到着時刻：#{result.artime.strftime('%H:%M')}" %></span>
+          </li>
+    </div> 
+    <% end %>
+
+  <% else %>
+    該当する商品はありません
   <% end %>
-<% else %>
-  該当する商品はありません
-<% end %>
-<br>
-<%= link_to 'トップページへ戻る', root_path %>
+  <br>
+  <%= link_to 'トップページへ戻る', root_path %>
+</div>
+
+<%= render "shared/footer" %>

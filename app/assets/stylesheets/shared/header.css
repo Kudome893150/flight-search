@@ -1,0 +1,46 @@
+.top-page-header {
+  display: flex;
+}
+
+.flight-search-icon {
+  width: 10vw;
+  margin: 0 10vw 0 5vw;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists {
+  display: flex;
+  list-style: none;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}

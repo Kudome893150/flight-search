@@ -1,0 +1,63 @@
+.index-page{
+  background-image: url("body-background.png");
+  background-size: contain;
+}
+
+.body-title{
+  font-size: larger;
+  font-weight: bolder;
+  color: navy;
+}
+
+.all-images{
+  display: flex;
+  justify-content: space-around;
+}
+
+.flight-image{
+  width: 33vw;
+  height: 60vh;
+}
+
+
+.all-search-form{
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.search-form{
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  text-align: center;
+
+}
+
+.departure-form{
+  font-weight: 900;
+  margin-right:50px ;
+  color:navy;
+}
+
+.arrive-form{
+  font-weight: 900;
+  color: navy;
+}
+
+.day-form{
+  margin: 0 0 15px 0;
+  font-weight: 900;
+  color: navy;
+}
+
+.model-form{
+  margin: 0 0 15px 0;
+  font-weight: 900;
+  color: navy;
+}
+
+.form-explain{
+  font-size: small;
+  font-weight: lighter;
+  color: red;
+}

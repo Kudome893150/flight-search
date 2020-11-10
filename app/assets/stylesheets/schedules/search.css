@@ -1,0 +1,51 @@
+.all-search-form{
+  background-image: url("body-background.png");
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-schedules{
+  background-color: white;
+  padding: 10px 0;
+  list-style: none;
+  margin:0 300px 50px 300px;
+}
+
+.results-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.airline-name{
+  font-size: larger;
+  font-weight: 900;
+  margin: 0 0 20px 0;
+  padding-left: 5vw;
+}
+
+.day{
+  font-size: larger;
+  margin: 0 0 20px 0;
+  padding-right: 5vw;
+}
+
+.results-middle{
+  text-align: left;
+}
+
+.airport{
+  font-size: medium;
+  padding-left: 5vw;
+  text-decoration: underline;
+}
+
+.results-bottom{
+  text-align: left;
+}
+
+.time{
+  font-size: 25px;
+  font-weight: 900;
+  padding-left: 5vw;
+}
