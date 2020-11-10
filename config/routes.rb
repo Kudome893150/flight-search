@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'schedules/index'
-  get 'schedules/search'
+  devise_for :users
   root 'schedules#index'
   get 'schedules/search'
 end
