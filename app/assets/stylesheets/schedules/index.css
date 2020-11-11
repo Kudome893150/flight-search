@@ -61,3 +61,8 @@
   font-weight: lighter;
   color: red;
 }
+
+.search-btn{
+  width: 15vw;
+  margin: 0 auto;
+}
