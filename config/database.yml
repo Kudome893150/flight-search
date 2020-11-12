@@ -52,3 +52,5 @@ production:
   database: flight_search_production
   username: flight_search
   password: <%= ENV['FLIGHT_SEARCH_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
