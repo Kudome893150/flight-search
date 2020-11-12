@@ -119,7 +119,7 @@ Gem"Ransack"を使用して、各テーブルに保存した値からカラム�
 
 ## データーベース設計
 
-![ER図](assets/images/flight-search.png)
+![ER図](app/assets/images/flight-search.png)
 
 ### Departure テーブル
 
