@@ -1,12 +1,12 @@
 .all-search-form{
-  background-image: url("body-background.png");
-  background-size: contain;
+  background-color: #EEFFFF;
   display: flex;
   flex-direction: column;
 }
 
 .flight-schedules{
   background-color: white;
+  border: 2px solid navy;
   padding: 10px 0;
   list-style: none;
   margin:0 300px 50px 300px;

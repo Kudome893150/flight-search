@@ -10,7 +10,15 @@ https://flight-search-30473.herokuapp.com/
 
 ## テスト用アカウント
 
-Basis認証
+__テストアカウント__
+
+アカウント名 : test太郎
+Pass : test123
+姓 : 山田
+名 : 太郎
+
+__Basis認証__
+
 ID : flight
 pass : 1111
 
