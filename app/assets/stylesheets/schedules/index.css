@@ -1,7 +1,5 @@
 .index-page{
-  background-image: url("body-background.png");
-  background-size: contain;
-  margin-top: 5px;
+  background-color: #EEFFFF;
 }
 
 .body-title{
@@ -13,11 +11,14 @@
 .all-images{
   display: flex;
   justify-content: space-around;
+  border-bottom: 4px double navy;
+  border-top: 4px double navy;
 }
 
 .flight-image{
-  width: 33vw;
+  width: 1040px;
   height: 60vh;
+  margin: 5px 0;
 }
 
 
