@@ -12,10 +12,8 @@ https://flight-search-30473.herokuapp.com/
 
 __テストアカウント__
 
-アカウント名 : test太郎
+email : test@test.com
 Pass : test123
-姓 : 山田
-名 : 太郎
 
 __Basis認証__
 
