@@ -1,0 +1,22 @@
+<%= render "shared/header" %>
+
+
+<h1 class="title">航空機材一覧</h1>
+
+<div class="table-name">
+  <p class="table-title">機材名</p>
+  <p class="table-title">機材名(フルネーム)</p>
+</div>
+
+<% @airplanes.each do |airplane| %>
+  <table>
+    <tr>
+      <td class=""><%= link_to"#{ airplane.equipment}",airplane_path(airplane.id) %></td>
+      <td><%= airplane.eq_name %></td>
+    </tr> 
+  </table> 
+<% end %>
+
+  <%= link_to 'トップページへ戻る', root_path %>
+
+<%= render "shared/footer" %>

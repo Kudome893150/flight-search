@@ -169,6 +169,13 @@ users テーブル
 
 - has_many :schedules
 
+airplanes テーブル
+
+| Column          | Type   | Options     |
+| --------------- | ------ | ----------- |
+| equipment       | string | null: false |
+
+
 ## ローカルでの動作方法
 
 ```

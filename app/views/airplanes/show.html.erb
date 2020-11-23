@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+
+<div class="airplane-show">
+  <div class="airplane-show-box">
+    <table class="airplane-details-table">
+      <tbody>
+        <tr>
+          <th class="airplane-details">機材名(3レター)</th>
+          <td class="airplane-value"><%= @airplane.equipment %></td>
+        </tr>
+        <tr>
+          <th class="airplane-details">機材名(フルネーム)</th>
+          <td class="airplane-value"><%= @airplane.eq_name%></td>
+        </tr> 
+        <tr>
+          <th class="airplane-details">説明</th>
+          <td class="airplane-value"><%= @airplane.explain %></td>
+        </tr>
+        <tr>
+          <th class="airplane-details"></th>
+          <td class="airplane-value"> <%= image_tag @airplane.image, class: 'airplane-image' %></td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>
+  <div class='airplane-footer'>
+    <%= button_to "トップページに戻る", root_path, { method: :get, class: "airplane-footer-title"} %> 
+    <%= button_to '機材一覧ページへ戻る', airplanes_index_path, { method: :get, class: "airplane-footer-title"} %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
