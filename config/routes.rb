@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'schedules#index'
   get 'schedules/search'
   get 'airlines/index'
+  get 'airplanes/index'
+  resources :airplanes, only:[:show]
 end
